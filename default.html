@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" >
+
+        function Cars(name,brand)
+        {
+            this.name=name
+            this.brand=brand
+
+            this.isAutomaticCar=function()
+            {
+                    document.write("<h1>Car is Automatic</h1>")
+            }
+        }
+
+        var bmw=new Cars("BMW","A")
+        var bmw1=new Cars("BMW","B")
+
+
+        document.write(bmw.name+"::"+bmw.brand+ "<br/>"+bmw.color) 
+        bmw.isAutomaticCar()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

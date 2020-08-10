@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery UI Demo</title>
+    <link rel="stylesheet" href="css/mycss.css">
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css"> -->
+</head>
+<body>
+    <h1>Friends Prouctions💖💖💖😊😊😊</h1>
+   <div class="main_class">
+
+    <div id="msgbx_id">
+
+        <button>
+            CLick here to get my bio
+        </button>
+    
+       </div>
+   <div id="divvv_id">
+
+    <h1>2020 Calender</h1>
+
+    <input id="in_id" type="text" placeholder="Click to Select date">
+
+   </div>
+   <br/>
+
+    <br/>
+  
+   <div id="divss_id">
+
+    <h1>My new Logo</h1>
+
+        <img id="img_id" src="images/fp1.jpg"  width="500px" title="fp logo">
+
+   </div>
+
+   <div id="divpp_id"  class="center">
+
+    <h1 id="c">Welcome to My website</h1>
+
+
+    <label>Enter the City Name</label>
+    <input type="text" id="textbox">
+
+   
+    <br/>
+    <br/><br/>
+    <img id="img_id" src="images/fp9.jpg"  width="500px" title="fp logo">
+
+   </div>
+
+   <div id="pannel">
+    <h2>Sarianodu</h2>
+
+    <p>Allu Arjun's Mass Entertainer</p>
+
+    <h2>Attadu</h2>
+
+    <p>Mahesh Babu's Class Entertainer.A professional killer is hired to fake the assassination of a politician. 
+        However, when the politician is killed and he is framed for his murder, 
+        he takes on a dead man's identity to escape the law.</p>
+    <h2>Ram</h2>
+
+    <p>Ram's Comedy Entertainer</p>
+
+   </div>
+   </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <!-- <script src="jquery-ui-1.12.1/jquery-ui.js" type="text/javascript"></script> -->
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+
+  <script>
+
+        $("#divss_id").hide()
+        $("#in_id").datepicker({
+            numberOfMonths:1,
+            changeYear:true,
+            changeMonth:true,
+            showOtherMonths:true,
+            minDate:new Date(1990,0,1),
+            maxDate:new Date(2022,0,12)
+            
+        });
+
+        $("img").tooltip({
+            track:true,
+            show:{
+                effect:"highlight",duration:3000
+            }
+        })
+
+        $("#pannel").css({
+            border:"1px solid black",
+            width:"500px"
+        })
+
+        $("#pannel").accordion({
+            collapsible:true,
+            heightStyle:true,
+            active:-1
+
+        })
+
+        $("#msgbx_id").css({
+            border:"1px solid black",
+            display: "inline-block",
+            float: "right"
+        })
+
+    
+        $("#msgbx_id").click(function(){
+            $("#divss_id").dialog({
+                title:"My Bio with Logo",
+                modal:true,
+                width:"500",
+
+                buttons:[
+                {
+                    text:"Close",
+                    icon:"ui-icon-heart",
+                    click:function(){
+                        $(this).dialog("close")
+                    }
+                },
+                {
+                    text:"OK",
+                    icon:"ui-icon-heart",
+                    click:function(){
+                        $(this).dialog("close")
+                    }
+
+                }
+                ]
+        
+            })
+        })
+
+        var cities=[
+        "Wanaparthy","Andaman And Nicobar Islands (Union Territory)","Port Blair","Andhra Pradesh","Adoni","Amaravati","Anantapur","Chandragiri","Chittoor","Dowlaiswaram","Eluru","Guntur","Kadapa","Kakinada","Kurnool","Machilipatnam","Nagarjunakoṇḍa","Rajahmundry","Srikakulam","Tirupati","Vijayawada","Visakhapatnam","Vizianagaram","Yemmiganur","Arunachal Pradesh","Itanagar","Assam","Dhuburi","Dibrugarh","Dispur","Guwahati","Jorhat","Nagaon","Sibsagar","Silchar","Tezpur","Tinsukia","Bihar","Ara","Baruni","Begusarai","Bettiah","Bhagalpur","Bihar Sharif","Bodh Gaya","Buxar","Chapra","Darbhanga","Dehri","Dinapur Nizamat","Gaya","Hajipur","Jamalpur","Katihar","Madhubani","Motihari","Munger","Muzaffarpur","Patna","Purnia","Pusa","Saharsa","Samastipur","Sasaram","Sitamarhi","Siwan","Chandigarh (Union Territory)","Chandigarh","Chhattisgarh","Ambikapur","Bhilai","Bilaspur","Dhamtari","Durg","Jagdalpur","Raipur","Rajnandgaon","Dadra And Nagar Haveli (Union Territory)","Silvassa","Daman And Diu (Union Territory)","Daman","Diu","Delhi (National Capital Territory)","Delhi","New Delhi","Goa","Madgaon","Panaji","Gujarat","Ahmadabad","Amreli","Bharuch","Bhavnagar","Bhuj","Dwarka","Gandhinagar","Godhra","Jamnagar","Junagadh","Kandla","Khambhat","Kheda","Mahesana","Morvi","Nadiad","Navsari","Okha","Palanpur","Patan","Porbandar","Rajkot","Surat","Surendranagar","Valsad","Veraval","Haryana","Ambala","Bhiwani","Chandigarh","Faridabad","Firozpur Jhirka","Gurgaon","Hansi","Hisar","Jind","Kaithal","Karnal","Kurukshetra","Panipat","Pehowa","Rewari","Rohtak","Sirsa","Sonipat","Himachal Pradesh","Bilaspur","Chamba","Dalhousie","Dharmshala","Hamirpur","Kangra","Kullu","Mandi","Nahan","Shimla","Una","Jammu And Kashmir","Anantnag","Baramula","Doda","Gulmarg","Jammu","Kathua","Leh","Punch","Rajauri","Srinagar","Udhampur","Jharkhand","Bokaro","Chaibasa","Deoghar","Dhanbad","Dumka","Giridih","Hazaribag","Jamshedpur","Jharia","Rajmahal","Ranchi","Saraikela","Karnataka","Badami","Ballari","Bangalore","Belgavi","Bhadravati","Bidar","Chikkamagaluru","Chitradurga","Davangere","Halebid","Hassan","Hubballi-Dharwad","Kalaburagi","Kolar","Madikeri","Mandya","Mangaluru","Mysuru","Raichur","Shivamogga","Shravanabelagola","Shrirangapattana","Tumkuru","Kerala","Alappuzha","Badagara","Idukki","Kannur","Kochi","Kollam","Kottayam","Kozhikode","Mattancheri","Palakkad","Thalassery","Thiruvananthapuram","Thrissur","Madhya Pradesh","Balaghat","Barwani","Betul","Bharhut","Bhind","Bhojpur","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Guna","Gwalior","Hoshangabad","Indore","Itarsi","Jabalpur","Jhabua","Khajuraho","Khandwa","Khargon","Maheshwar","Mandla","Mandsaur","Mhow","Morena","Murwara","Narsimhapur","Narsinghgarh","Narwar","Neemuch","Nowgong","Orchha","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Sarangpur","Satna","Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Ujjain","Vidisha","Maharashtra","Ahmadnagar","Akola","Amravati","Aurangabad","Bhandara","Bhusawal","Bid","Buldana","Chandrapur","Daulatabad","Dhule","Jalgaon","Kalyan","Karli","Kolhapur","Mahabaleshwar","Malegaon","Matheran","Mumbai","Nagpur","Nanded","Nashik","Osmanabad","Pandharpur","Parbhani","Pune","Ratnagiri","Sangli","Satara","Sevagram","Solapur","Thane","Ulhasnagar","Vasai-Virar","Wardha","Yavatmal","Manipur","Imphal","Meghalaya","Cherrapunji","Shillong","Mizoram","Aizawl","Lunglei","Nagaland","Kohima","Mon","Phek","Wokha","Zunheboto","Odisha","Balangir","Baleshwar","Baripada","Bhubaneshwar","Brahmapur","Cuttack","Dhenkanal","Keonjhar","Konark","Koraput","Paradip","Phulabani","Puri","Sambalpur","Udayagiri","Puducherry (Union Territory)","Karaikal","Mahe","Puducherry","Yanam","Punjab","Amritsar","Batala","Chandigarh","Faridkot","Firozpur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Nabha","Patiala","Rupnagar","Sangrur","Rajasthan","Abu","Ajmer","Alwar","Amer","Barmer","Beawar","Bharatpur","Bhilwara","Bikaner","Bundi","Chittaurgarh","Churu","Dhaulpur","Dungarpur","Ganganagar","Hanumangarh","Jaipur","Jaisalmer","Jalor","Jhalawar","Jhunjhunu","Jodhpur","Kishangarh","Kota","Merta","Nagaur","Nathdwara","Pali","Phalodi","Pushkar","Sawai Madhopur","Shahpura","Sikar","Sirohi","Tonk","Udaipur","Sikkim","Gangtok","Gyalsing","Lachung","Mangan","Tamil Nadu","Arcot","Chengalpattu","Chennai","Chidambaram","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kanchipuram","Kanniyakumari","Kodaikanal","Kumbakonam","Madurai","Mamallapuram","Nagappattinam","Nagercoil","Palayankottai","Pudukkottai","Rajapalaiyam","Ramanathapuram","Salem","Thanjavur","Tiruchchirappalli","Tirunelveli","Tiruppur","Tuticorin","Udhagamandalam","Vellore","Telangana","Hyderabad","Karimnagar","Khammam","Mahbubnagar","Nizamabad","Sangareddi","Warangal","Tripura","Agartala","Uttar Pradesh","Agra","Aligarh","Amroha","Ayodhya","Azamgarh","Bahraich","Ballia","Banda","Bara Banki","Bareilly","Basti","Bijnor","Bithur","Budaun","Bulandshahr","Deoria","Etah","Etawah","Faizabad","Farrukhabad-cum-Fatehgarh","Fatehpur","Fatehpur Sikri","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur","Lakhimpur","Lalitpur","Lucknow","Mainpuri","Mathura","Meerut","Mirzapur-Vindhyachal","Moradabad","Muzaffarnagar","Partapgarh","Pilibhit","Prayagraj","Rae Bareli","Rampur","Saharanpur","Sambhal","Shahjahanpur","Sitapur","Sultanpur","Tehri","Varanasi","Uttarakhand","Almora","Dehra Dun","Haridwar","Mussoorie","Nainital","Pithoragarh","West Bengal","Alipore","Alipur Duar","Asansol","Baharampur","Bally","Balurghat","Bankura","Baranagar","Barasat","Barrackpore","Basirhat","Bhatpara","Bishnupur","Budge Budge","Burdwan","Chandernagore","Darjiling","Diamond Harbour","Dum Dum","Durgapur","Halisahar","Haora","Hugli","Ingraj Bazar","Jalpaiguri","Kalimpong","Kamarhati","Kanchrapara","Kharagpur","Koch Bihar","Kolkata","Krishnanagar","Malda","Midnapore","Murshidabad","Navadwip","Palashi","Panihati","Purulia","Raiganj","Santipur","Shantiniketan","Shrirampur","Siliguri","Siuri","Tamluk","Titagarh",
+        ]
+
+        $("#textbox").autocomplete({
+
+            source:cities
+        },{
+            autoFocus:true,
+            delay:0
+        })
+
+  </script>
+</html>

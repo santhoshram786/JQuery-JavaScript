@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manipulation</title>
+    <link rel="stylesheet" href="css/mycss.css">
+</head>
+<body>
+    <div id="div_id">
+    
+        <p id="p_id" value="Paragrapgh_value">This is my Paragraph</p>
+
+    </div>
+
+    <button id="b_id">Action</button>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  
+<script>
+
+    $(document).ready(function()
+    {
+        $("#b_id").click(function()
+        {
+            var p=$("#p_id").text()
+            //alert(p)
+            $("#p_id").html()
+            var p=$("#p_id").attr("value")
+            alert(p)
+
+            alert($("#p_id").css("font-family"))
+        })
+    })
+
+</script>
+</html>

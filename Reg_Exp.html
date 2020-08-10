@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Submitform()
+        {
+            var u=document.getElementById("i_id")
+            var p=document.getElementById("j_id")
+        
+            if(u.value.trim()== "")
+           {
+            document.getElementById("label_id").style.visibility="visible"
+            return false
+           }
+           else if(p.value.trim()==""||p.value<8)
+           {
+            document.getElementById("label_id1").style.visibility="visible"
+               return false
+           }
+           else
+           {
+               return true
+           }
+        
+        
+        }
+       
+        </script>
+</head>
+<body>
+    <form onsubmit="return Submitform()" action="welcome.html">
+
+        <input id="i_id" placeholder="Enter text" >
+        <label id="label_id" style="color:red;visibility:hidden " >Invalid User</label>
+        <br><br>
+        <input id="j_id" type="password" placeholder="Enter password">
+        <label id="label_id1"style="color:red;visibility:hidden" >Invalid Password Password hould be more than 8 charaters</label>
+        <br><br>
+        <button type="submit">CLick Me</button>
+</body>
+</html>

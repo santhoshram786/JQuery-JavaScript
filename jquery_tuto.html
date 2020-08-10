@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Tutorial</title>
+    <link rel="stylesheet" href="css/mycss.css">
+</head>
+<body>
+    <h1 id="i_id">I will fade out</h1>
+    <button id="but_id" >Click me</button>
+    <button id="buttt_id" >Animate</button>
+    <p>I will change if you hover</p>
+
+    <button id="b_id">Hover Here</button>
+
+    <br>  <br>
+
+    <div id="div_id" class="my_cube">
+
+       <p id="p_dd">Cube</p> 
+       
+    </div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script >
+
+   $(document).ready(
+   function()
+   {
+    $("#but_id").click(clickme)
+    $("#b_id").hover(f1,f2)
+    function clickme()
+    {
+        	$("#i_id").fadeToggle(1000);
+    }
+
+    function f1()
+    {
+        $("p").fadeOut(2000);
+    }
+
+    function f2()
+    {
+        $("p").fadeIn();
+    }
+
+    $("#buttt_id").click(
+        function(){
+
+            $("#div_id").animate({
+                left:'150px',
+                opacity:'1',
+                width:'100px',
+                height:'100px',
+                
+
+            },1000)
+
+
+        }
+    )
+   }
+   )
+
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <script type="text/javascript" >
+   
+        function Clicking()
+        {
+            document.getElementById("h13_id").innerHTML="Changed the text👍👍👍👍👍👍"
+            var s=document.getElementById("i_id").value
+            var s1=document.getElementById("j_id").value
+            document.getElementById("h13_id").innerHTML=s+":"+s1
+        
+            var radio_var=document.getElementById("male_id")
+            var radio_var1=document.getElementById("female_id")
+        
+            var selcct_var=document.getElementById("selct_id")
+        
+            alert("The Select item is :"+ selcct_var.options[selcct_var.selectedIndex].value)
+           // document.write(radio_var.value)
+            //document.write(radio_var1.value)
+            //alert("Thank you!!!!!!!")
+        
+            var par=document.getElementsByTagName("p")
+        
+            par[0].style.fontSize = "25px"
+        
+            par[1].style.color="Green"
+        
+            par[2].style.fontWeight="bold"
+        
+            par[3].style.fontStyle="Italic"
+        }
+        
+        function MouserOver()
+        {
+            document.getElementById("img_id").src="images/fp3.png"
+        }
+        function MouserOut()
+        {
+            document.getElementById("img_id").src="images/fp1.jpg"
+        }
+        function Submitform()
+        {
+            var u=document.getElementById("i_id")
+            var p=document.getElementById("j_id")
+        
+            if(u.value.trim()== "")
+           {
+            document.getElementById("label_id").style.visibility="visible"
+            return false
+           }
+           else if(p.value.trim()==""||p.value<8)
+           {
+            document.getElementById("label_id1").style.visibility="visible"
+               return false
+           }
+           else
+           {
+               return true
+           }
+        
+        
+        }
+       
+        </script>
+</head>
+
+<body>
+    <form onsubmit="return Submitform()" action="welcome.html">
+
+    <input id="i_id" placeholder="Enter text" >
+    <label id="label_id" style="color:red;visibility:hidden " >Invalid User</label>
+    <br><br>
+    <input id="j_id" type="password" placeholder="Enter password">
+    <label id="label_id1"style="color:red;visibility:hidden" >Invalid Password Password hould be more than 8 charaters</label>
+    <br><br>
+    <button type="submit">CLick Me</button>
+
+</form>
+    <h3 id="h13_id">Text will changed when you click that above buttom</h3>
+
+    <input id="male_id" type="radio" name="gender" value="Male">Male<br>
+    <input id="female_id" type="radio" name="gender" value="Female">Female
+
+    <select id="selct_id" >
+
+        <option  value="January">January</option>
+        <option  value="feb">feb</option>
+        <option  value="march">march</option>
+        <option  value="apr">apr</option>
+        <option  value="may">may</option>
+    </select><br>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+  
+    <br>
+
+    <img id="img_id" onmouseover="MouserOver()" onmouseout="MouserOut()" src="images/fp1.jpg" width="500" height="300">
+</body>
+
+</html>
